@@ -1,0 +1,26 @@
+#
+# File: locales.yml
+# Description: Update system locales
+#
+---
+
+- name: "*** Update system locales"
+  hosts: "*"
+
+  #
+  # Variables
+  #
+  vars:
+    - locales:
+        - 'export LANGUAGE=en_US.UTF-8'
+        - 'export LANG=en_US.UTF-8'
+        - 'export LC_ALL=en_US.UTF-8'
+
+  #
+  # Tasks
+  #
+  tasks:
+    - name: "Update locales."
+      shell: "{{ locales }}"
+      become: yes
+      ignore_errors: yes

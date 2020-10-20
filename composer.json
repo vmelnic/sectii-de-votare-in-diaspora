@@ -1,0 +1,23 @@
+{
+    "name": "vm/sectii-de-votare-in-diaspora",
+    "description": "amplasarea exactă a tuturor secțiilor de votare din diasporă.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladimir Melnic",
+            "email": "win32hack@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "bin": [
+        "bin/export.php"
+    ]
+}

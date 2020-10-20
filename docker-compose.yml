@@ -1,0 +1,17 @@
+#
+# Docker based environment.
+#
+---
+
+version: '3.7'
+
+services:
+
+  web:
+    container_name: 'web'
+    hostname: 'web'
+    build:
+      context: './var/docker'
+      target: 'php73-composer'
+    volumes:
+      - .:/var/www/html
